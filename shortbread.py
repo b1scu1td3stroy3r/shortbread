@@ -28,7 +28,7 @@ def audit_url(target: str):
         console.print(f"[bold red]Connection Error:[/bold red] {error}")
         sys.exit(1)
 
-    table = Table(title="HTTP Security Header Audit")
+    table = Table(title="HTTP Defence Header Audit")
     table.add_column("Header", style="cyan", no_wrap=True)
     table.add_column("Status", style="bold")
     table.add_column("Security Purpose", style="dim")
@@ -43,7 +43,7 @@ def audit_url(target: str):
     console.print(f"\n[dim]Audit completed for status code {response.status_code}.[/dim]\n")
 
 def main():
-    parser = argparse.ArgumentParser(description="Shortbread - HTTP Security Header Auditor")
+    parser = argparse.ArgumentParser(description="Shortbread - HTTP Defence Header Auditor")
     parser.add_argument("-u", "--url", required=True, help="Target URL or domain to audit")
     args = parser.parse_args()
 
